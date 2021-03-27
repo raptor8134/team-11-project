@@ -1,6 +1,18 @@
 body {
 	background-color: #efefef;
 }
+
+a{
+	color: #5632fb;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+h1{
+	color: #3a4354;
+	text-align: center;
+}
+
 .meeting {
 	color: #7a7a7a;
 	background-color: #ffffff;
@@ -16,25 +28,16 @@ body {
 	border-radius: 10px;
 }
 
-a{
-	color: #5632fb;
-	text-decoration: none;
-	font-weight: bold;
-}
-
-h1{
-	color: #3a4354;
-	text-align: center;
-}
 .topbar {
 	position: fixed;
 	top: 0px; left: 0px; right: 0px;
 	height: 50px;
 	width: 100%;
-	background-color: hotpink; /*test color for top bar*/
+	background-color: black; 
+	overflow: hide;
 }
+
 .logo {
-	background-color: black;
 	text-align: center;
 	font-size: 30px;
 	font-weight: bold;
@@ -44,13 +47,30 @@ h1{
 	font-family: 'Courier New', monospace;
 	height: 50px;
 }
+
 .logo p{
 	margin-top: 10px;
-	margin-bottom: 10px;
 }
+
+.baritem {
+	float: center;
+	width: 15%;
+	color: black;
+	background-color: white;
+	font-size: 20px;
+	left: 20%;
+	text-align: center;
+	border-right: 4px solid black;
+}
+
+.baritem p{
+	margin-top: -5px;
+}
+
 #date{
 	margin-left: 50px;
 	width: 40%;
 	text-align: left;
 	margin-top: 70px;
 }
+
