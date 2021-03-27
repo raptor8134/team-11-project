@@ -22,27 +22,30 @@ h1{
 	color: #3a4354;
 	text-align: center;
 }
-.homebutton {
-	padding: 15px;
-	position: absolute;
-	top: 20px;
-	left: 20px;
-	border: 3px solid black;
-	margin: 0px;
-	background-color: white;
-	color: black;
-	font-size: 20px;
+.topbar {
+	position: fixed;
+	top: 0px; left: 0px; right: 0px;
+	height: 50px;
+	width: 100%;
+	background-color: hotpink; /*test color for top bar*/
 }
-.homebuttonp {
-	margin-top: 0em;
-	margin-bottom: 0em;
+.logo {
+	background-color: black;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	width: 20%;
+	padding: 1px;
+	color: white;
+	font-family: 'Courier New', monospace;
 }
-.days {
-	padding-top: 1px;
-	padding-bottom: 10px;
-	color: #151515;
+.logo p{
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 #days{
-	margin-left: 30px;
-	width: 50%;
+	margin-left: 50px;
+	width: 40%;
+	text-align: left;
+	margin-top: 70px;
 }
