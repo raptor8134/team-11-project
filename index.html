@@ -7,21 +7,6 @@
 
 	<body>
 		<div id="days"></div>
-		<div class="meeting">
-			<a href="https://zoom.us" target="_blank">meeting 1</a>
-		</div>
-		<div class="meeting">
-			<a href="https://zoom.us" target="_blank">meeting 2</a>
-		</div>
-		<div class="meeting">
-			<a href="https://zoom.us" target="_blank">meeting 3</a>
-		</div>
-		<div class="meeting">
-			<a href="https://zoom.us" target="_blank">meeting 4</a>
-		</div>
-		<div class="meeting">
-			<a href="https://zoom.us" target="_blank">meeting 5</a>
-		</div>
 	</body>
 
 	<script type="text/javascript">
@@ -30,10 +15,7 @@
 		var today = new Date();
 		var currentYear = today.getFullYear();
 		var yearLength;
-		days = ["Sunday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-		months = ["January", "Feburary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-		// monthLengths = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 		if (currentYear % 4 == 0) {
 			yearLength = 366;
 		} else {
@@ -59,6 +41,12 @@
 			return "<h1>" + dateSting.split(" 00:")[0] + "</h1>";
 		}
 
-		document.getElementById('days').innerHTML = getDateString(dateFromDay(currentYear, currentDayNumber));
+		function addMeeting(url) {
+			return `\n <div class="meeting">
+				<a href="` + url + `" target="_blank">Meeting</a>
+			</div>`
+		}
+
+		document.getElementById('days').innerHTML = getDateString(dateFromDay(currentYear, currentDayNumber)) + addMeeting("https://us02web.zoom.us/meeting/register/tZwtdOiorDkrGtNu0lvirw_yLuV644lp6dZ") + document.getElementById('days').innerHTML;
 	</script>
 </html>
