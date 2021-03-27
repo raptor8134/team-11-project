@@ -1,5 +1,5 @@
 body {
-	background-color: #5b84b1ff;
+	background-color: #070b0d;
 }
 
 a{
@@ -14,30 +14,35 @@ h1{
 }
 
 h2{
-	color: black;
+	color: white;
 }
 
 .meeting {
 	color: #7a7a7a;
-	background-color: #ffffff;
+	background-color: #131821;
 	
 	padding-bottom: 15px;
+
+	padding-top: 15px;
 	padding-left: 30px;
 	
 	margin-left: 30px;
-	margin-bottom: 15px;
-	
-	border: 2px solid #404040;
+	margin-bottom: 30px;
+
 	border-radius: 10px;
 }
 
-.topbar {
+.sidebar {
+	width: 30%;
 	position: fixed;
-	top: 0px; left: 0px; right: 0px;
-	height: 50px;
-	width: 100%;
-	background-color: black; 
-	overflow: hide;
+	z-index: 1;
+	right: 5%;
+	background: #131821;
+	overflow-x: hidden;
+	overflow-y: auto;
+	padding: 8px 0;
+	top: 60px;
+	border-radius: 10px;
 }
 
 .logo {
@@ -55,7 +60,7 @@ h2{
 	margin-top: 10px;
 }
 
-.baritem {
+/* .baritem {
 	float: center;
 	width: 15%;
 	color: black;
@@ -66,31 +71,39 @@ h2{
 	border-right: 4px solid black;
 	top: 5px;
 	height: 40px;
-}
+} */
 
 .baritem p{
 	margin-top: -11px;
 }
 
-#date{
+#day{
 	margin-left: 50px;
-	width: 40%;
+	width: 50%;
 	text-align: left;
-	margin-top: 70px;
+	margin-top: 60px;
 }
 
 .joinbutton{
-	text-align: center;
 	margin-right: 5%;
 	margin-left: 70%;
 	margin-top: -35px;
-	padding: 3px;
-	color: black;
-	background-color: lightgreen;
+	padding: 7px;
+	color: white;
+	text-align: center;
+	background-color: #e6303a;
 	border-radius: 5px;
-	border: 3px solid green;
 }
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,700&display=swap');
+
+button{
+	padding: 7px;
+	color: white;
+	text-align: center;
+	background-color: #e6303a;
+	border-radius: 5px;
+	border-width: 0px;
+}
+/* @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,700&display=swap');
 h2{
 	font-family: 'Source Code Pro', monospace;
 }
@@ -103,4 +116,4 @@ h2{
 }
 .adding {
 	font-family: 'Source Code Pro', monospace;
-}
+} */

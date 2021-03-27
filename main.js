@@ -30,14 +30,14 @@ function getDateString(dateObject) {
 }
 
 function addMeeting(url, name, start, end) {
-	return `\n <div class="meeting">
+	document.getElementById('day').innerHTML = document.getElementById('day').innerHTML + `\n <div class="meeting">
 	<h2>` + name + `</h2> <p>` + start + ` to ` + end + `</p> <a href="` + url + `" target="_blank"><div class="joinbutton">Join</div></a>
 	</div>`
 }
 
 //TODO make this into a json read function from a browser cache, after we make the input page
 //Feel free to add more fields as necessary, just dont forget the json part
-/*
+
 var meetings1 = [ // for testing only
 	{'url': "someurl", 'name': "History", 'start': "7:40", 'end': "8:50"},
 	{'url': "someurl", 'name': "English", 'start': "9:00", 'end': "10:10"},
@@ -45,17 +45,17 @@ var meetings1 = [ // for testing only
 	{'url': "someurl", 'name': "Spanish", 'start': "11:40", 'end': "12:50"},
 	{'url': "someurl", 'name': "After-school help", 'start': "1:50", 'end': "2:35"},
 ];
-*/
 
-var meetings = JSON.parse(data);
 
-//var meetings = {};
-//for (var i = 0; i < raw_json.meetings.length; i++) {
-//	meetings[i] = raw_json.meetings[i];
-//}
-//console.log(meetings);
+// var meetings = JSON.parse(data);
 
-function addMeetingS(meetings) {
+// var meetings = {};
+// for (var i = 0; i < raw_json.meetings.length; i++) {
+// 	meetings[i] = raw_json.meetings[i];
+// }
+// console.log(meetings);
+
+function addMeetings(meetings) {
 	var retval;
 	for (var i = 0; i < meetings.length; i++) {
 		retval += addMeeting(meetings[i]['url'], meetings[i]['name'], meetings[i]['start'], meetings[i]['end']);
@@ -63,4 +63,4 @@ function addMeetingS(meetings) {
 	return retval;
 }
 
-document.getElementById('date').innerHTML = getDateString(dateFromDay(currentYear, currentDayNumber)) + addMeetingS(meetings) + document.getElementById('date').innerHTML;
+document.getElementById('date').innerHTML = getDateString(dateFromDay(currentYear, currentDayNumber)) + addMeetings(meetings1);
