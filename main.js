@@ -29,24 +29,25 @@ function getDateString(dateObject) {
 	return "<h1>" + dateSting.split(" 00:")[0] + "</h1>";
 }
 
-function addMeeting(url, name) {
+function addMeeting(url, name, start, end) {
 	return `\n <div class="meeting">
-	<h2>` + name + `</h2> <a href="` + url + `" target="_blank"><div class="joinbutton">Join</div></a>
+	<h2>` + name + `</h2> <p>` + start + ` to ` + end + `</p> <a href="` + url + `" target="_blank"><div class="joinbutton">Join</div></a>
 	</div>`
 }
 
+//TODO make this into a json read function from a browser cache, after we make the input page
 var meetings = [ // for testing only
-	{'url': "someurl", 'name': "Class 1", 'start': "time", 'end': "time"},
-	{'url': "someurl", 'name': "Class 2", 'start': "time", 'end': "time"},
-	{'url': "someurl", 'name': "Class 3", 'start': "time", 'end': "time"},
-	{'url': "someurl", 'name': "Class 4", 'start': "time", 'end': "time"},
+	{'url': "someurl", 'name': "History", 'start': "7:40", 'end': "8:50"},
+	{'url': "someurl", 'name': "English", 'start': "9:00", 'end': "10:10"},
+	{'url': "someurl", 'name': "Math", 'start': "10:20", 'end': "11:30"},
+	{'url': "someurl", 'name': "Spanish", 'start': "11:40", 'end': "12:50"},
 ];
 
 function addMeetingS(meetings) {
 	var retval;
 	for (var i = 0; i < meetings.length; i++) {
 		console.log(meetings[i]);
-		retval += addMeeting(meetings[i]['url'], meetings[i]['name']);
+		retval += addMeeting(meetings[i]['url'], meetings[i]['name'], meetings[i]['start'], meetings[i]['end']);
 	}
 	return retval;
 }

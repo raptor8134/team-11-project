@@ -82,7 +82,8 @@ h2{
 .joinbutton{
 	text-align: center;
 	margin-right: 5%;
-	margin-left: 85%;
+	margin-left: 70%;
+	margin-top: -40px;
 	padding: 3px;
 	color: black;
 	background-color: lightgreen;
