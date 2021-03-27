@@ -42,6 +42,7 @@ function addMeetingS(meetings) {
 	for (var i = 0; i < meetings.length; i++) {
 		retval += addMeeting(meetings[i]);
 	}
+	console.log(retval);
 	return retval;
 }
 
