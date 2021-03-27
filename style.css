@@ -1,0 +1,9 @@
+body {
+	background-color: #3b3b3b;
+}
+.meeting {
+	color: #ff0000;
+	background-color: #ffffff;
+	padding: 10px;
+	margin: 10px;
+}
