@@ -1,6 +1,17 @@
 body {
 	background-color: #070b0d;
+	animation-name: bodycolour;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
 }
+@keyframes bodycolour {
+	20% {background-color: #7EF9FF;}
+	20% {background-color: #4C516D;}
+	20% {background-color: #6593F5;}
+	20% {background-color: #0080FF;}
+	20% {background-color: #1D2951;}
+}
+
 
 a{
 	color: #5632fb;
