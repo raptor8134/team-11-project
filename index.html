@@ -4,6 +4,46 @@
 	<title>Meeting Aggregator</title>
 </head>
 <body>
-
+	<div id="days"></div>
 </body>
 </html>
+<script type="text/javascript">
+	var currentDayNumber = getDayOfYear();
+
+    dateText = document.getElementById("datetext");
+
+    var today = new Date();
+
+    var currentYear = today.getFullYear();
+
+    var yearLength;
+
+    days = ["Sunday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    months = ["January", "Feburary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+    // monthLengths = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+    if(currentYear% 4 == 0) {
+        yearLength = 366;
+    }else{
+        yearLength = 365;
+    }
+
+    function getDayOfYear(){
+        var now = new Date();
+        var start = new Date(now.getFullYear(), 0, 0);
+        var diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
+        var oneDay = 1000 * 60 * 60 * 24;
+        var day = Math.floor(diff / oneDay);
+        return day;
+    }
+
+    function dateFromDay(year, day){
+        var date = new Date(year, 0); // initialize a date in `year-01-01`
+        return new Date(date.setDate(day)); // add the number of days
+    }
+
+    document.getElementById('days').innerHTML = "<h1>" + dateFromDay(currentYear, getDayOfYear()) + "</h1>";
+
+</script>
