@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<title>Meeting Aggregator</title>
 		<link rel="stylesheet" href="style.css">
@@ -55,9 +54,11 @@
 			return new Date(date.setDate(day)); // add the number of days
 		}
 
-		var currentDateString = dateFromDay(currentYear, getDayOfYear()) + "";
-		currentDateString = currentDateString.split(" 00:")[0];
+		function getDateString(dateObject) {
+			var dateSting = dateObject + "";
+			return "<h1>" + dateSting.split(" 00:")[0] + "</h1>";
+		}
 
-		document.getElementById('days').innerHTML = "<h1>" + currentDateString + "</h1>";
+		document.getElementById('days').innerHTML = getDateString(dateFromDay(currentYear, currentDayNumber));
 	</script>
 </html>
