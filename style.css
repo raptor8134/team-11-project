@@ -6,19 +6,25 @@ a{
 	color: #5632fb;
 	text-decoration: none;
 	font-weight: bold;
+	font-family: 'Open Sans', sans-serif;
 }
 
 h1{
 	color: white;
 	text-align: center;
+	font-family: 'Open Sans', sans-serif;
 }
 
 h2{
 	color: white;
 }
 
+p{
+	font-family: 'Open Sans', sans-serif;
+}
+
 .meeting {
-	color: #7a7a7a;
+	color: #949494;
 	background-color: #131821;
 	
 	padding-bottom: 15px;
@@ -93,27 +99,22 @@ h2{
 	text-align: center;
 	background-color: #e6303a;
 	border-radius: 5px;
+	font-family: 'Open Sans', sans-serif;
 }
 
-button{
+/* button{
 	padding: 7px;
 	color: white;
 	text-align: center;
 	background-color: #e6303a;
 	border-radius: 5px;
 	border-width: 0px;
-}
-/* @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@1,700&display=swap');
+	font-family: 'Open Sans', sans-serif;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 h2{
-	font-family: 'Source Code Pro', monospace;
-}
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,500;1,700&display=swap');
-.github {
-	font-family: 'Source Code Pro', monospace;
-}
-.hackathon {
-	font-family: 'Source Code Pro', monospace;
+	font-family: 'Open Sans', sans-serif;
 }
 .adding {
-	font-family: 'Source Code Pro', monospace;
-} */
+	font-family: 'Open Sans', sans-serif;
+}
