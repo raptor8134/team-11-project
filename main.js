@@ -35,4 +35,14 @@ function addMeeting(url) {
 	</div>`
 }
 
-document.getElementById('days').innerHTML = getDateString(dateFromDay(currentYear, currentDayNumber)) + addMeeting("https://us02web.zoom.us/meeting/register/tZwtdOiorDkrGtNu0lvirw_yLuV644lp6dZ") + document.getElementById('days').innerHTML;
+var meetings = ["link1", "link2", "link3"];
+
+function addMeetingS(meetings) {
+	var retval;
+	for (var i = 0; i < meetings.length; i++) {
+		retval += addMeeting(meetings[i]);
+	}
+	return retval;
+}
+
+document.getElementById('date').innerHTML = getDateString(dateFromDay(currentYear, currentDayNumber)) + addMeetingS(/*"https://us02web.zoom.us/meeting/register/tZwtdOiorDkrGtNu0lvirw_yLuV644lp6dZ"*/meetings) + document.getElementById('date').innerHTML;
