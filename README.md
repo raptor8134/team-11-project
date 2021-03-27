@@ -1,3 +1,3 @@
-# Meeting aggregator
-  Solution: Organizing/simplifying
+# Aggi - Meeting Aggregator
+  Condensing online meetings to a single place
  
