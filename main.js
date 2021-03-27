@@ -41,6 +41,7 @@ var meetings = [ // for testing only
 	{'url': "someurl", 'name': "English", 'start': "9:00", 'end': "10:10"},
 	{'url': "someurl", 'name': "Math", 'start': "10:20", 'end': "11:30"},
 	{'url': "someurl", 'name': "Spanish", 'start': "11:40", 'end': "12:50"},
+	{'url': "someurl", 'name': "After-school help", 'start': "1:50", 'end': "2:35"},
 ];
 
 function addMeetingS(meetings) {
