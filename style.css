@@ -1,9 +1,18 @@
 body {
-	background-color: #3b3b3b;
+	background-color: #efefef;
 }
 .meeting {
 	color: #ff0000;
 	background-color: #ffffff;
 	padding: 10px;
 	margin: 10px;
+	border-radius: 10px;
+}
+
+a{
+	color: #5632fb;
+}
+
+h1{
+	color: #3a4354;
 }
