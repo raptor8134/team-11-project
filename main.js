@@ -26,7 +26,7 @@ function dateFromDay(year, day) {
 
 function getDateString(dateObject) {
 	var dateSting = dateObject + "";
-	return "<h1>" + dateSting.split(" 00:")[0] + "</h1>";
+	return "<h2 style='margin-left: 80px; top:60;'>" + dateSting.split(" 00:")[0] + "</h2>";
 }
 
 function addMeeting(url, name, start, end) {
@@ -68,3 +68,4 @@ function addMeetings(meetingsInput) {
 	return retval;
 }
 
+document.body.innerHTML = document.body.innerHTML.replace(/NaN/, ' '); 
