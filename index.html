@@ -1,66 +1,63 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <title>Meeting Aggregator</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
+	<head>
+		<title>Meeting Aggregator</title>
+		<link rel="stylesheet" href="style.css">
+	</head>
 
-  <body>
-    <div id="days"></div>
-    <div class="meeting">
-      <a href="https://zoom.us" target="_blank">meeting 1</a>
-    </div>
-    <div class="meeting">
-      <a href="https://zoom.us" target="_blank">meeting 2</a>
-    </div>
-    <div class="meeting">
-      <a href="https://zoom.us" target="_blank">meeting 3</a>
-    </div>
-    <div class="meeting">
-      <a href="https://zoom.us" target="_blank">meeting 4</a>
-    </div>
-    <div class="meeting">
-      <a href="https://zoom.us" target="_blank">meeting 5</a>
-    </div>
+	<body>
+		<div id="days"></div>
+		<div class="meeting">
+			<a href="https://zoom.us" target="_blank">meeting 1</a>
+		</div>
+		<div class="meeting">
+			<a href="https://zoom.us" target="_blank">meeting 2</a>
+		</div>
+		<div class="meeting">
+			<a href="https://zoom.us" target="_blank">meeting 3</a>
+		</div>
+		<div class="meeting">
+			<a href="https://zoom.us" target="_blank">meeting 4</a>
+		</div>
+		<div class="meeting">
+			<a href="https://zoom.us" target="_blank">meeting 5</a>
+		</div>
+	</body>
 
-    <script type="text/javascript">
-      var currentDayNumber = getDayOfYear();
-      dateText = document.getElementById("datetext");
-      var today = new Date();
-      var currentYear = today.getFullYear();
-      var yearLength;
-      days = ["Sunday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-      months = ["January", "Feburary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+	<script type="text/javascript">
+		var currentDayNumber = getDayOfYear();
+		dateText = document.getElementById("datetext");
+		var today = new Date();
+		var currentYear = today.getFullYear();
+		var yearLength;
+		days = ["Sunday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+		months = ["January", "Feburary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
-      // monthLengths = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-      if (currentYear % 4 == 0) {
-        yearLength = 366;
-      } else {
-        yearLength = 365;
-      }
+		// monthLengths = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+		if (currentYear % 4 == 0) {
+			yearLength = 366;
+		} else {
+			yearLength = 365;
+		}
 
-      function getDayOfYear() {
-        var now = new Date();
-        var start = new Date(now.getFullYear(), 0, 0);
-        var diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
-        var oneDay = 1000 * 60 * 60 * 24;
-        var day = Math.floor(diff / oneDay);
-        return day;
-      }
+		function getDayOfYear() {
+			var now = new Date();
+			var start = new Date(now.getFullYear(), 0, 0);
+			var diff = (now - start) + ((start.getTimezoneOffset() - now.getTimezoneOffset()) * 60 * 1000);
+			var oneDay = 1000 * 60 * 60 * 24;
+			var day = Math.floor(diff / oneDay);
+			return day;
+		}
 
-      function dateFromDay(year, day) {
-        var date = new Date(year, 0); // initialize a date in `year-01-01`
-        return new Date(date.setDate(day)); // add the number of days
-      }
+		function dateFromDay(year, day) {
+			var date = new Date(year, 0); // initialize a date in `year-01-01`
+			return new Date(date.setDate(day)); // add the number of days
+		}
 
-	  var currentDateString = dateFromDay(currentYear, getDayOfYear()) + "";
-	  currentDateString = currentDateString.split(" 00:")[0];
+		var currentDateString = dateFromDay(currentYear, getDayOfYear()) + "";
+		currentDateString = currentDateString.split(" 00:")[0];
 
-      document.getElementById('days').innerHTML = "<h1>" + currentDateString + "</h1>";
-
-    </script>
-
-  </body>
-
+		document.getElementById('days').innerHTML = "<h1>" + currentDateString + "</h1>";
+	</script>
 </html>
