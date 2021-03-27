@@ -31,7 +31,7 @@ function getDateString(dateObject) {
 
 function addMeeting(url, name) {
 	return `\n <div class="meeting">
-	<h2>` + name + `</h2> - <a href="` + url + `" target="_blank">Join</a>
+	<h2>` + name + `</h2> <a href="` + url + `" target="_blank"><div class="joinbutton">Join</div></a>
 	</div>`
 }
 
