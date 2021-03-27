@@ -29,20 +29,25 @@ function getDateString(dateObject) {
 	return "<h1>" + dateSting.split(" 00:")[0] + "</h1>";
 }
 
-function addMeeting(url) {
+function addMeeting(url, name) {
 	return `\n <div class="meeting">
-	<h2>Meeting</h2> - <a href="` + url + `" target="_blank">Join</a>
+	<h2>` + name + `</h2> - <a href="` + url + `" target="_blank">Join</a>
 	</div>`
 }
 
-var meetings = ["link1", "link2", "link3"];
+var meetings = [ // for testing only
+	{'url': "someurl", 'name': "Class 1", 'start': "time", 'end': "time"},
+	{'url': "someurl", 'name': "Class 2", 'start': "time", 'end': "time"},
+	{'url': "someurl", 'name': "Class 3", 'start': "time", 'end': "time"},
+	{'url': "someurl", 'name': "Class 4", 'start': "time", 'end': "time"},
+];
 
 function addMeetingS(meetings) {
 	var retval;
 	for (var i = 0; i < meetings.length; i++) {
-		retval += addMeeting(meetings[i]);
+		console.log(meetings[i]);
+		retval += addMeeting(meetings[i]['url'], meetings[i]['name']);
 	}
-	console.log(retval);
 	return retval;
 }
 
